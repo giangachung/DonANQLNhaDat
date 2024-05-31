@@ -160,7 +160,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Gi&#xe1;p ranh"/>
+        <Property name="text" type="java.lang.String" value="&#x110;&#x1ecb;a ch&#x1ec9;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
@@ -175,9 +175,9 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
-            <StringItem index="0" value="dat tho cu"/>
-            <StringItem index="1" value="dat ruong"/>
-            <StringItem index="2" value="dat thanh thi"/>
+            <StringItem index="0" value="&#x111;&#x1ea5;t th&#x1ed5; "/>
+            <StringItem index="1" value="&#x111;&#x1ea5;t ru&#x1ed9;ng"/>
+            <StringItem index="2" value="&#x111;&#x1ea5;t th&#xe0;nh th&#x1ecb;"/>
           </StringArray>
         </Property>
       </Properties>
@@ -274,8 +274,8 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
-            <StringItem index="0" value="da co"/>
-            <StringItem index="1" value="chua co"/>
+            <StringItem index="0" value="&#x111;&#xe3; c&#xf3;"/>
+            <StringItem index="1" value="ch&#x1b0;a c&#xf3;"/>
           </StringArray>
         </Property>
       </Properties>

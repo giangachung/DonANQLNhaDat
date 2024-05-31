@@ -187,9 +187,14 @@ public class DatManagerrr extends javax.swing.JFrame {
         jLabel7.setText("Sổ đỏ");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 2, 14)); // NOI18N
-        jLabel6.setText("Giáp ranh");
+        jLabel6.setText("Địa chỉ");
 
-        cbbDat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "dat tho cu", "dat ruong", "dat thanh thi" }));
+        cbbDat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "đất thổ cư", "đất ruộng", "đất thành thị" }));
+        cbbDat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbbDatActionPerformed(evt);
+            }
+        });
 
         txtSoThua.setEditable(false);
         txtSoThua.setEnabled(false);
@@ -275,7 +280,8 @@ public class DatManagerrr extends javax.swing.JFrame {
             }
         });
 
-        cbbSoDo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "da co", "chua co" }));
+        cbbSoDo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "đã có", "chưa có" }));
+        cbbSoDo.setName(""); // NOI18N
         cbbSoDo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbbSoDoActionPerformed(evt);
@@ -402,9 +408,9 @@ public class DatManagerrr extends javax.swing.JFrame {
        
 
         int maDat;
-        if(tenDat.equals("dat tho cu")){
+        if(tenDat.equals("đất thổ cư")){
             maDat=01;
-        }else if(tenDat.equals("dat ruong")){
+        }else if(tenDat.equals("đất ruộng")){
             maDat=02;
         }else {
             maDat=03;
@@ -523,6 +529,10 @@ public class DatManagerrr extends javax.swing.JFrame {
         newForm.setVisible(true);
      
     }//GEN-LAST:event_btChitietActionPerformed
+
+    private void cbbDatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbDatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbbDatActionPerformed
 
     /**
      * @param args the command line arguments

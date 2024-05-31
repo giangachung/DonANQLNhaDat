@@ -7,9 +7,11 @@ package qlnhaaadattt;
 import TienVN.org.com.dao.ConnectionDB;
 import TienVN.org.com.model.ChoSoHuu;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Vector;
 import javax.swing.JOptionPane;
@@ -81,10 +83,11 @@ public class Admin_formation extends javax.swing.JFrame {
             throw new RuntimeException(e);
         }
     }
-    
+
     public void ShowProfileSearch() {
     String tenSearch1 = txtTim.getText();
     String tenSearch2 = txtTim1.getText();
+     
     if (tenSearch1.length() == 0  && tenSearch2.length()==0  ) {
         ShowProfile();
     } else {
@@ -123,10 +126,10 @@ public class Admin_formation extends javax.swing.JFrame {
             tbl_thongtin.setModel(model);
 
             Vector<String> totalRow = new Vector<>();
+            totalRow.add("Tổng giá bán:");
             totalRow.add("");
             totalRow.add("");
-            totalRow.add("");
-            totalRow.add("Tổng giá bán:"); // Label for total sale price
+            totalRow.add(""); // Label for total sale price
             totalRow.add(String.valueOf(totalSalePrice)); // Display the total sale price
             totalRow.add("(triệu đồng)");
             model.addRow(totalRow);
@@ -187,16 +190,16 @@ public class Admin_formation extends javax.swing.JFrame {
 
         lblHoachToan.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lblHoachToan.setForeground(new java.awt.Color(255, 255, 255));
-        lblHoachToan.setText("Thống kê");
+        lblHoachToan.setText("Thống kê doanh thu tháng nay");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(284, 284, 284)
+                .addGap(219, 219, 219)
                 .addComponent(lblHoachToan)
-                .addContainerGap(376, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

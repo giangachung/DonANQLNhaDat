@@ -4,6 +4,9 @@
  */
 package giaodienngdung;
 
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
 import loginn.login;
 import qlnhaaadattt.AddUserFramm;
 import qlnhaaadattt.ChuSoHuuManager;
@@ -39,6 +42,7 @@ public class UserScreen extends javax.swing.JFrame {
         bt_YeuCau = new javax.swing.JButton();
         btnDangXuat = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        bt_hopDong = new javax.swing.JButton();
 
         jButton3.setBackground(new java.awt.Color(102, 102, 255));
         jButton3.setText("Các Chủ Sở Hữu");
@@ -92,6 +96,14 @@ public class UserScreen extends javax.swing.JFrame {
             }
         });
 
+        bt_hopDong.setBackground(new java.awt.Color(102, 102, 255));
+        bt_hopDong.setText("Hợp đồng mua bán");
+        bt_hopDong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_hopDongActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -109,7 +121,9 @@ public class UserScreen extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)))
                 .addGap(55, 55, 55)
-                .addComponent(bt_YeuCau, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bt_YeuCau, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bt_hopDong, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(77, 77, 77))
         );
         jPanel1Layout.setVerticalGroup(
@@ -120,7 +134,9 @@ public class UserScreen extends javax.swing.JFrame {
                     .addComponent(bt_YeuCau, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bt_hopDong, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addComponent(btnDangXuat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -174,6 +190,25 @@ public class UserScreen extends javax.swing.JFrame {
         new ttChuSoHuu().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void bt_hopDongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_hopDongActionPerformed
+        // TODO add your handling code here:
+        String filePath = "C:\\Java\\QLNhaDat\\QLNhaDat\\NhaDatManager\\src\\main\\java\\anhsodo\\Anh\\HopDongMuaBan.pdf"; 
+        openPDFFile(filePath);   
+    }//GEN-LAST:event_bt_hopDongActionPerformed
+
+    private void openPDFFile(String filePath) {
+    File file = new File(filePath);
+    if (file.exists()) {
+        Desktop desktop = Desktop.getDesktop();
+        try {
+            desktop.open(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    } else {
+        System.out.println("File không tồn tại.");
+    }
+}
     /**
      * @param args the command line arguments
      */
@@ -211,6 +246,7 @@ public class UserScreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_YeuCau;
+    private javax.swing.JButton bt_hopDong;
     private javax.swing.JButton btnDangXuat;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

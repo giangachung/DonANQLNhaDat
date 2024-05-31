@@ -79,12 +79,12 @@ public class AddDatFram extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("Giáp ranh");
+        jLabel5.setText("Địa chỉ");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Sổ đỏ");
 
-        cbbLoaiDat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "dat tho cu", "dat ruong", "dat thanh thi" }));
+        cbbLoaiDat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "đất thổ ", "đất ruộng", "đất thành thị" }));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Số thửa");
@@ -133,7 +133,7 @@ public class AddDatFram extends javax.swing.JDialog {
             }
         });
 
-        cbbSoDo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "da co", "chua co" }));
+        cbbSoDo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "đã có", "chưa có" }));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("Số điện thoại");
